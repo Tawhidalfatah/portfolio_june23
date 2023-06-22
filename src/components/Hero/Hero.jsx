@@ -49,7 +49,7 @@ const Hero = () => {
         clearInterval(h2Interval);
         setH2Text(h2Value);
         setH2AnimationFinished(true);
-      }, 1000);
+      }, 1100);
     };
     animateH1Text();
     animateH2Text();
@@ -93,13 +93,13 @@ const Hero = () => {
   }, [h1AnimationFinished, h2AnimationFinished]);
 
   return (
-    <div className="flex justify-center mt-32 md:mt-80">
+    <div id="hero" className="flex justify-center mt-32 md:mt-80">
       <div>
-        <h1 id="hero-title" className="text-5xl md:text-7xl">
+        <h1 id="hero-title" className="text-5xl md:text-7xl font-medium">
           {h1Text}
         </h1>
         <br />
-        <h2 id="mern" className="text-2xl md:text-5xl">
+        <h2 id="mern" className="text-2xl md:text-5xl font-medium">
           {h2Text}
         </h2>
       </div>

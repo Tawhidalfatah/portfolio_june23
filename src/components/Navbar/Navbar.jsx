@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { BsGithub, BsLinkedin } from "react-icons/bs";
-import { TbPdf } from "react-icons/tb";
+import { FaFilePdf } from "react-icons/fa";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -10,47 +10,64 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="shadow-lg">
+    <nav>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
             <div className="flex gap-5 flex-shrink-0 items-center">
-              <BsGithub size={30} />
-              <BsLinkedin size={30} />
-              <TbPdf size={30} />
+              <a
+                href="https://github.com/Tawhidalfatah"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <BsGithub size={30} />
+              </a>
+              <a
+                href="https://www.linkedin.com/in/tawhidalfatah/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <BsLinkedin size={30} />
+              </a>
+              <a
+                href="/TawhidAlfatah_Resume.pdf"
+                download="TawhidAlfatah_Resume"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <FaFilePdf size={30} />
+              </a>
             </div>
           </div>
           <div className="hidden md:block">
             <div className="flex items-center justify-end space-x-4">
-              {" "}
-              {/* Updated */}
               <a
-                href="#home"
-                className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-lg font-medium"
+                href="#hero"
+                className=" px-3 py-2 rounded-md text-2xl font-medium"
               >
                 Home
               </a>
               <a
                 href="#skills"
-                className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-lg font-medium"
+                className=" px-3 py-2 rounded-md text-2xl font-medium"
               >
                 Skills
               </a>
               <a
                 href="#projects"
-                className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-lg font-medium"
+                className="px-3 py-2 rounded-md text-2xl font-medium"
               >
                 Projects
               </a>
               <a
                 href="#about"
-                className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-lg font-medium"
+                className=" px-3 py-2 rounded-md text-2xl font-medium"
               >
                 About Me
               </a>
               <a
                 href="#contact"
-                className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-lg font-medium"
+                className=" px-3 py-2 rounded-md text-2xl font-medium"
               >
                 Contact
               </a>
@@ -109,31 +126,31 @@ const Navbar = () => {
         <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 shadow-md absolute right-1 z-10">
           <a
             href="#home"
-            className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-lg font-medium"
+            className="block px-3 py-2 rounded-md text-lg font-medium"
           >
             Home
           </a>
           <a
             href="#skills"
-            className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-lg font-medium"
+            className=" block px-3 py-2 rounded-md text-lg font-medium"
           >
             Skills
           </a>
           <a
             href="#projects"
-            className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-lg font-medium"
+            className=" block px-3 py-2 rounded-md text-lg font-medium"
           >
             Projects
           </a>
           <a
             href="#about"
-            className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-lg font-medium"
+            className=" block px-3 py-2 rounded-md text-lg font-medium"
           >
             About Me
           </a>
           <a
             href="#contact"
-            className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-lg font-medium"
+            className=" block px-3 py-2 rounded-md text-lg font-medium"
           >
             Contact
           </a>
