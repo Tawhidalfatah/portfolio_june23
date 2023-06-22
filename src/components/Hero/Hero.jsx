@@ -9,7 +9,7 @@ const Hero = () => {
   useEffect(() => {
     const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     const h1Value = "I AM TAWHID";
-    const h2Value = "a MERN Developer";
+    const h2Value = "MERN Stack Developer";
 
     let h1Iteration = 0;
     let h1Interval = null;
@@ -58,7 +58,7 @@ const Hero = () => {
   useEffect(() => {
     if (h1AnimationFinished && h2AnimationFinished) {
       const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-      const h2Value = "a MERN Developer";
+      const h2Value = "MERN Stack Developer";
 
       let h2Iteration = 0;
       let h2Interval = null;
@@ -93,13 +93,16 @@ const Hero = () => {
   }, [h1AnimationFinished, h2AnimationFinished]);
 
   return (
-    <div id="hero" className="flex justify-center mt-32 md:mt-80">
+    <div id="hero" className="flex justify-center mt-32 md:mt-80 h-[580px]">
       <div>
-        <h1 id="hero-title" className="text-5xl md:text-7xl font-medium">
+        <h1
+          id="hero-title"
+          className="text-5xl md:text-8xl font-medium text-left"
+        >
           {h1Text}
         </h1>
         <br />
-        <h2 id="mern" className="text-2xl md:text-5xl font-medium">
+        <h2 id="mern" className="text-2xl md:text-5xl font-medium text-center">
           {h2Text}
         </h2>
       </div>
