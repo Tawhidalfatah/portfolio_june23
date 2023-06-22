@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Zoom } from "react-awesome-reveal";
 
 const Hero = () => {
   const [h1AnimationFinished, setH1AnimationFinished] = useState(false);
@@ -93,19 +94,28 @@ const Hero = () => {
   }, [h1AnimationFinished, h2AnimationFinished]);
 
   return (
-    <div id="hero" className="flex justify-center mt-32 md:mt-80 h-[580px]">
-      <div>
-        <h1
-          id="hero-title"
-          className="text-5xl md:text-8xl font-medium text-left"
-        >
-          {h1Text}
-        </h1>
-        <br />
-        <h2 id="mern" className="text-2xl md:text-5xl font-medium text-center">
-          {h2Text}
-        </h2>
+    <div className=" mt-32 md:mt-80 h-[580px]">
+      <div id="hero" className="flex justify-center">
+        <div>
+          <h1
+            id="hero-title"
+            className="text-5xl md:text-8xl font-medium text-left"
+          >
+            {h1Text}
+          </h1>
+          <br />
+          <h2
+            id="mern"
+            className="text-2xl md:text-5xl font-medium text-center"
+          >
+            {h2Text}
+          </h2>
+        </div>
       </div>
+      <br />
+      <Zoom delay={3000}>
+        <div className="border w-1/3 border-black mx-auto"></div>
+      </Zoom>
     </div>
   );
 };
