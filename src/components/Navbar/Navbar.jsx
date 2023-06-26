@@ -4,13 +4,18 @@ import { FaFilePdf } from "react-icons/fa";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-
+  const handleDownload = (event) => {
+    event.preventDefault();
+    const fileId = "1oXo0v581gEWLgQiFQ9pjX3MDYbck9nxf";
+    const url = `https://drive.google.com/uc?export=download&id=${fileId}`;
+    window.location.href = url;
+  };
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
   return (
-    <nav className="fixed w-full top-0">
+    <nav className="fixed w-full top-0 z-30">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
@@ -29,12 +34,7 @@ const Navbar = () => {
               >
                 <BsLinkedin size={30} />
               </a>
-              <a
-                href="/TawhidAlfatah_Resume.pdf"
-                download="TawhidAlfatah_Resume"
-                target="_blank"
-                rel="noreferrer"
-              >
+              <a href="/" onClick={handleDownload} download>
                 <FaFilePdf size={30} />
               </a>
             </div>

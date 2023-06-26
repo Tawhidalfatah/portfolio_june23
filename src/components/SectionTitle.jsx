@@ -9,7 +9,7 @@ const SectionTitle = ({ heading }) => {
         </h1>
       </Zoom>
       <Zoom delay={500}>
-        <div className="border w-1/12 border-black mx-auto"></div>
+        <div className="border w-1/4 md:w-2/12 border-black mx-auto"></div>
       </Zoom>
     </div>
   );

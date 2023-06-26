@@ -70,7 +70,7 @@ const Skills = () => {
   return (
     <div id="skills">
       <SectionTitle heading="Skills" />
-      <div className="grid grid-cols-1 md:grid-cols-4 ">
+      <div className="grid grid-cols-2 md:grid-cols-4 ">
         {skills.map(({ label, percent }) => (
           <div className="px-5 " key={label}>
             <ProgressBar

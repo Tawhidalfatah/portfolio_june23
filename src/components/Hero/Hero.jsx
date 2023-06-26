@@ -10,7 +10,7 @@ const Hero = () => {
   useEffect(() => {
     const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     const h1Value = "I AM TAWHID";
-    const h2Value = "MERN Stack Developer";
+    const h2Value = "A MERN Stack Developer";
 
     let h1Iteration = 0;
     let h1Interval = null;
@@ -59,7 +59,7 @@ const Hero = () => {
   useEffect(() => {
     if (h1AnimationFinished && h2AnimationFinished) {
       const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-      const h2Value = "MERN Stack Developer";
+      const h2Value = "A MERN Stack Developer";
 
       let h2Iteration = 0;
       let h2Interval = null;
@@ -94,28 +94,30 @@ const Hero = () => {
   }, [h1AnimationFinished, h2AnimationFinished]);
 
   return (
-    <div className=" mt-32 md:mt-80 h-[580px]">
-      <div id="hero" className="flex justify-center">
-        <div>
-          <h1
-            id="hero-title"
-            className="text-5xl md:text-8xl font-medium text-left"
-          >
-            {h1Text}
-          </h1>
-          <br />
-          <h2
-            id="mern"
-            className="text-2xl md:text-5xl font-medium text-center"
-          >
-            {h2Text}
-          </h2>
+    <div className="mt-32 md:mt-80 h-[200px] md:h-[580px]">
+      <div>
+        <div id="hero" className="flex justify-center">
+          <div>
+            <h1
+              id="hero-title"
+              className="text-5xl md:text-8xl font-medium text-left"
+            >
+              {h1Text}
+            </h1>
+            <br />
+            <h2
+              id="mern"
+              className="text-2xl md:text-5xl font-medium text-center"
+            >
+              {h2Text}
+            </h2>
+          </div>
         </div>
+        <br />
+        <Zoom delay={3000}>
+          <div className="border w-2/3 md:w-full border-black mx-auto"></div>
+        </Zoom>
       </div>
-      <br />
-      <Zoom delay={3000}>
-        <div className="border w-1/3 border-black mx-auto"></div>
-      </Zoom>
     </div>
   );
 };
